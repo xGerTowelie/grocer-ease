@@ -27,7 +27,7 @@ export default function ViewDishes() {
     )
 
     return (
-        <div className="container mx-auto p-4">
+        <div className="container p-4">
             <div className="flex justify-between items-center mb-6">
                 <h1 className="text-3xl font-bold">My Dishes</h1>
                 <Button>

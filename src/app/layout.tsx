@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Sidebar from '@/components/Sidebar'
 import { SessionProvider } from "next-auth/react"
+import { Card } from "@/components/ui/card"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,8 +22,12 @@ export default function RootLayout({
                 <SessionProvider>
                     <div className="flex h-screen bg-gray-100">
                         <Sidebar />
-                        <main className="flex-1 p-4 overflow-auto">
-                            {children}
+                        <main className="flex-1 p-4">
+                            <Card className="h-full overflow-auto">
+                                <div className="p-6">
+                                    {children}
+                                </div>
+                            </Card>
                         </main>
                     </div>
                 </SessionProvider>
